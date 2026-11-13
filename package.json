@@ -1,5 +1,1 @@
-{
-  "dependencies": {
-    "ethers": "^6.17.0"
-  }
-}
+{"author":"Faisal (jackdefi.ai)","bin":{"token-sellability":"./check.js"},"dependencies":{"ethers":"^6.17.0"},"description":"Check whether a BSC token can actually be sold: PancakeSwap pair, liquidity, and a transfer dry-run.","engines":{"node":">=18"},"keywords":["bsc","token","sellability","pancakeswap"],"license":"MIT","main":"check.js","name":"token-sellability","scripts":{"test":"node --check check.js"},"version":"1.0.0"}

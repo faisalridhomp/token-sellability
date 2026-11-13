@@ -115,6 +115,12 @@ if (!token || !wallet) {
     console.log("Usage: node check.js <tokenAddress> <walletAddress>");
     process.exit(1);
 }
+for (const [label, addr] of [["token", token], ["wallet", wallet]]) {
+    if (!ethers.isAddress(addr)) {
+        console.error(`ERROR: "${addr}" is not a valid EVM ${label} address (0x + 40 hex chars).`);
+        process.exit(1);
+    }
+}
 check(ethers.getAddress(token), ethers.getAddress(wallet)).catch((e) => {
     console.error("error:", e.shortMessage || e.message);
     process.exit(1);
